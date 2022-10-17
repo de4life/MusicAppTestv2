@@ -20,6 +20,7 @@ import SwiftUI
     var name: String
     var time: String
     }
+    private var imageLogo = 4
 
     //MARK:- Hardcode cells
     struct ContentView: View {
@@ -53,10 +54,26 @@ import SwiftUI
     @State private var currentAlbum: Album?
 
     var body: some View {
-        Youtube(videoID: "HEwBHlLheTs")
-            .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.3)
-            .cornerRadius(12)
-            .padding(.horizontal,21.0)
+        NavigationView {
+        GeometryReader { proxy in
+        TabView {
+            Youtube(videoID: "HEwBHlLheTs")
+                        .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.3)
+                        .cornerRadius(20)
+                        .padding(.horizontal,21.0)
+            ForEach(1..<imageLogo) { num in
+                Image("\(num)")
+                    .resizable()
+                    .scaleEffect()
+                    .overlay(Color.black.opacity(0.4))
+                    .tag(num)
+                
+            }
+        }.navigationTitle("YouTube API").tabViewStyle(PageTabViewStyle())
+                .frame(width: 340, height: 200, alignment: .center).clipped().cornerRadius(20).shadow(radius: 10).padding(20)
+
+      }
+        }
         NavigationView {
             ScrollView {
             ScrollView(.horizontal, showsIndicators: false, content: {
@@ -81,7 +98,7 @@ import SwiftUI
                                         SongCell(album: currentAlbum ?? albums.first!, song: song)
                     })
             }
-            }.navigationTitle("YouTube API")
+            }.navigationTitle("Playlist Name")
     }
     }
     }
