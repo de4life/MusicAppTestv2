@@ -11,6 +11,9 @@
 		72D953B028FDDECA00D005D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D953AF28FDDECA00D005D8 /* ContentView.swift */; };
 		72D953B228FDDED100D005D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D953B128FDDED100D005D8 /* Assets.xcassets */; };
 		72D953B528FDDED100D005D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D953B428FDDED100D005D8 /* Preview Assets.xcassets */; };
+		72D953BC28FDE8E400D005D8 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D953BB28FDE8E400D005D8 /* Youtube.swift */; };
+		72D953BE28FDE94200D005D8 /* BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D953BD28FDE94200D005D8 /* BlurEffect.swift */; };
+		72D953C028FDE98D00D005D8 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D953BF28FDE98D00D005D8 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		72D953AF28FDDECA00D005D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72D953B128FDDED100D005D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72D953B428FDDED100D005D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72D953BB28FDE8E400D005D8 /* Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
+		72D953BD28FDE94200D005D8 /* BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffect.swift; sourceTree = "<group>"; };
+		72D953BF28FDE98D00D005D8 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				72D953AD28FDDECA00D005D8 /* MusicAppTestv2App.swift */,
 				72D953AF28FDDECA00D005D8 /* ContentView.swift */,
+				72D953BF28FDE98D00D005D8 /* PlayerView.swift */,
+				72D953BD28FDE94200D005D8 /* BlurEffect.swift */,
+				72D953BB28FDE8E400D005D8 /* Youtube.swift */,
 				72D953B128FDDED100D005D8 /* Assets.xcassets */,
 				72D953B328FDDED100D005D8 /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D953BC28FDE8E400D005D8 /* Youtube.swift in Sources */,
+				72D953BE28FDE94200D005D8 /* BlurEffect.swift in Sources */,
 				72D953B028FDDECA00D005D8 /* ContentView.swift in Sources */,
+				72D953C028FDE98D00D005D8 /* PlayerView.swift in Sources */,
 				72D953AE28FDDECA00D005D8 /* MusicAppTestv2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
