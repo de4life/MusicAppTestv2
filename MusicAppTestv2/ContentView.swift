@@ -20,8 +20,9 @@ import SwiftUI
     var name: String
     var time: String
     }
-    private var imageLogo = 4
 
+    private var imageLogo = 4
+private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     //MARK:- Hardcode cells
     struct ContentView: View {
 
@@ -52,11 +53,11 @@ import SwiftUI
                                 Song(name: "Song 4", time: "2:36")])]
                 
     @State private var currentAlbum: Album?
-
+    @State private var currentIndex = 0
     var body: some View {
         NavigationView {
         GeometryReader { proxy in
-        TabView {
+            TabView(selection: $currentIndex) {
             Youtube(videoID: "HEwBHlLheTs")
                         .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.3)
                         .cornerRadius(20)
@@ -71,6 +72,9 @@ import SwiftUI
             }
         }.navigationTitle("YouTube API").tabViewStyle(PageTabViewStyle())
                 .frame(width: 340, height: 200, alignment: .center).clipped().cornerRadius(20).shadow(radius: 10).padding(20)
+                .onReceive(timer, perform: { _ in
+                    currentIndex = currentIndex < imageLogo ? currentIndex + 1 : 0
+                })
 
       }
         }
